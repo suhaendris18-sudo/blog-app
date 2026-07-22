@@ -22,18 +22,18 @@ function Home() {
       });
   }, []);
   return (
-    <div className="min-h-screen bg-green-50 py-10 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[#F8F4E9] py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row justify-between items-center border-b border-green-200 pb-6 mb-8 gap-4">
           <div>
-            <h1 className="text-3xl font-extrabold text-blue-900 tracking-tight">
-              Welcome to MinimalistBlog
+            <h1 className="text-5xl font-extrabold text-red-900 tracking-tight">
+              Welcome to Blog
             </h1>
       
           </div>
           <button 
             onClick={() => navigate('/create')}
-            className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2.5 rounded-lg shadow-sm transition-colors"
+            className="bg-[#6F4E37] hover:bg-[#E0E0E0] text-white font-medium px-5 py-2.5 rounded-lg shadow-sm transition-colors"
           >
             + Create New Post
           </button>
@@ -44,7 +44,7 @@ function Home() {
           </div>
         )}
         {error && (
-          <div className="bg-red-50 border border-red-200 rounded-lg p-6 text-center max-w-2xl mx-auto">
+          <div className="bg-[#F8F4E9] border border-red-200 rounded-lg p-6 text-center max-w-2xl mx-auto">
             <h3 className="text-red-800 font-bold text-lg mb-2">Error Occurred</h3>
             <p className="text-red-600 text-sm mb-4">{error}</p>
             <button 

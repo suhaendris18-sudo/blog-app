@@ -21,6 +21,13 @@ function BlogForm({ onSubmit }) {
           className="w-full p-2.5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
+
+
+
+
+
+
+      
       <div>
         <label className="block text-sm font-semibold text-gray-700 mb-1">Content</label>
         <textarea
@@ -33,7 +40,7 @@ function BlogForm({ onSubmit }) {
       </div>
       <button
         type="submit"
-        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 rounded-lg transition-colors"
+        className="w-full bg-[[#6F4E37]hover:bg-[#F8F4E9]text-white font-medium py-2.5 rounded-lg transition-colors"
       >
          Post
       </button>

@@ -8,7 +8,7 @@ import Navbar from './components/Navbar.jsx';
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-green-50 text-gray-900">
+      <div className="min-h-screen bg-[#F8F4E9] text-gray-900">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
