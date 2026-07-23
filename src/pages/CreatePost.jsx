@@ -29,7 +29,7 @@ function CreatePost() {
       <button onClick={() => navigate('/')} className="text-sm text-[#6F4E37] mb-4 block">
         ← Back to Home
       </button>
-      <h1 className="text-2xl font-bold text-gray-900 mb-6">Write a New Post</h1>
+      <h1 className="text-2xl font-bold text-gray-900 mb-6">Write a New post</h1>
       <BlogForm onSubmit={handleCreate} />
     </div>
   );
