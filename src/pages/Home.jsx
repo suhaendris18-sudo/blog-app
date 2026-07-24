@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import BlogCard from '../components/BlogCard';
+import { useAtom } from 'jotai';
+import { postsAtom } from '../atoms/bookmarkAtoms';
 function Home() {
   const navigate = useNavigate();
-  const [posts, setPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [posts,setPosts] = useAtom(postsAtom);
+  const [loading, setLoading] = useState(posts.length === 0);
   const [error, setError] = useState(null);
   useEffect(() => {
+    if (posts.length === 0) {
     fetch("https://dummyjson.com/posts?limit=10")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch posts from API");
@@ -20,7 +23,10 @@ function Home() {
         setError(err.message);
         setLoading(false);
       });
-  }, []);
+    }else{
+      setLoading(false);
+    }
+  }, [posts.length, setPosts]);
   return (
     <div className="min-h-screen bg-[#F8F4E9] py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
